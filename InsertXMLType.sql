@@ -4,6 +4,7 @@ IS
 
   myClob CLOB;
   l_xmlType XMLTYPE;
+  
 BEGIN 
  
  
