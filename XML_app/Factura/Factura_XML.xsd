@@ -9,10 +9,19 @@
   <xsd:complexType name="Factura_Type">
     <xsd:sequence>
       <xsd:element name="LineasDeArticulos" type="LineasDeArticulos_Type"/>
+      <xsd:element name="CodigoFactura" type="CodigoFactura_Type"/>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="LineasDeArticulos_Type"/>
+  <xsd:complexType name="LineasDeArticulos_Type">
+    <xsd:sequence>
+      <xsd:element name="LineaDeArticulo" type="LineaDeArticulo_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
   <xsd:complexType name="LineaDeArticulo_Type">
+    <xsd:sequence>
+      <xsd:element name="NombreDeArticulo" type="NombreArticulo_Type"/>
+      <xsd:element name="ArticuloComprado" type="ArticuloCompra_Type"/>
+    </xsd:sequence>
     <xsd:attribute name="numeroLinea" type="xsd:integer"/>
   </xsd:complexType>
   <xsd:complexType name="ArticuloCompra_Type">
@@ -35,6 +44,18 @@
   <xsd:simpleType name="Dinero_Type">
     <xsd:restriction base="xsd:decimal">
       <xsd:totalDigits value="12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodigoFactura_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="3"/>
+      <xsd:maxLength value="25"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NombreArticulo_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="2"/>
+      <xsd:maxLength value="50"/>
     </xsd:restriction>
   </xsd:simpleType>
 </xsd:schema>
