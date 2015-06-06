@@ -24,11 +24,17 @@
         </xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
-    <xsd:attribute name="cantidad" type="cantidad_Type"/>
+    <xsd:attribute name="cantidad" type="Cantidad_Type"/>
+    <xsd:attribute name="precioUnitario" type="Dinero_Type"/>
   </xsd:complexType>
-  <xsd:simpleType name="cantidad_Type">
+  <xsd:simpleType name="Cantidad_Type">
     <xsd:restriction base="xsd:decimal">
       <xsd:totalDigits value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dinero_Type">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="12"/>
     </xsd:restriction>
   </xsd:simpleType>
 </xsd:schema>
