@@ -24,7 +24,7 @@ insert into empleado  (idEmpleado, datos) values (100, sys.XMLTYPE.createXML (
  select idempleado , e.datos.extract('//PrimerNombre/text()').getStringVal() as 
  Nombre FROM empleado e where e.datos.extract ('//Apellido/text()').getStringVal() LIKE ' Cabrera ';
  
- select idempleado , e.datos.extract('//Persona/Nombre/PrimerNombre/text()').getStringVal() as 
+ select idempleado , e.datos.extract('//Persona[id]').getStringVal() as 
  Nombre FROM empleado e where e.datos.extract ('//Apellido/text()').getStringVal() LIKE ' Cabrera ';
  
  
