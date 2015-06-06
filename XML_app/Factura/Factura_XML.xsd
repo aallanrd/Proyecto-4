@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org"
             targetNamespace="http://www.example.org" elementFormDefault="qualified">
-  <xsd:element name="Factura" type="Factura_type">
+  <xsd:element name="Factura" type="Factura_Type">
     <xsd:annotation>
       <xsd:documentation>A sample element</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:complexType name="Factura_type">
+  <xsd:complexType name="Factura_Type">
     <xsd:sequence>
-      <xsd:element name="LineasDeArticulos" type="LineasDeArticulos_type"/>
+      <xsd:element name="LineasDeArticulos" type="LineasDeArticulos_Type"/>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="LineasDeArticulos_type"/>
-  <xsd:complexType name="LineaDeArticulo_type"/>
-  <xsd:complexType name="ArticuloCompra_type">
+  <xsd:complexType name="LineasDeArticulos_Type"/>
+  <xsd:complexType name="LineaDeArticulo_Type">
+    <xsd:attribute name="numeroLinea" type="xsd:integer"/>
+  </xsd:complexType>
+  <xsd:complexType name="ArticuloCompra_Type">
     <xsd:attribute name="codigo">
       <xsd:simpleType>
         <xsd:restriction base="xsd:string">
@@ -22,5 +24,11 @@
         </xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
+    <xsd:attribute name="cantidad" type="cantidad_Type"/>
   </xsd:complexType>
+  <xsd:simpleType name="cantidad_Type">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
 </xsd:schema>
