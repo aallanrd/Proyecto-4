@@ -27,10 +27,10 @@
       <ArticuloComprado codigo="DD1TB" cantidad="5" precioUnitario="25.5"/>
     </LineaDeArticulo>
     
-  
-    
-    
-    
-    
+    <LineaDeArticulo>
+      <NombreDeArticulo>Disco duro estado dólido</NombreDeArticulo>
+      <ArticuloComprado codigo="DDSol" cantidad="3" precioUnitario="29.95"/>
+    </LineaDeArticulo>
+ 
   </LineasDeCompra>
 </Factura>
