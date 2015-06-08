@@ -46,6 +46,7 @@
   </xsd:simpleType>
   <xsd:simpleType name="Dinero_Type">
     <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2"/>
       <xsd:totalDigits value="12"/>
     </xsd:restriction>
   </xsd:simpleType>
