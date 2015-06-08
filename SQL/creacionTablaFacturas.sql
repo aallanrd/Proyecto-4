@@ -43,9 +43,9 @@ INSERT INTO Facturas_OBJ VALUES ('Fact01', 'Prov01', 'jrojas', SYSDATE,
                                   T_ArticuloComprado('DD500GB', 10, 15.34)
                                 ));
 
-SELECT lineas.* 
+SELECT f.codigoFactura, lineas.* 
 FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
-WHERE f.codigoFactura = 'Fact01';
+
 
 select * from facturas_obj;
 
