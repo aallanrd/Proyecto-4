@@ -1,8 +1,8 @@
 -- Procedimiento que activa el listener para http en el puerto 9090
 -- Procedimiento que activa el listener para ftp en el puerto 2100
 begin
-    dbms_xdb.setHTTPport(9090);
-    dbms_xdb.setFTPport(2100);
+    dbms_xdb.setHTTPport(5005);
+    dbms_xdb.setFTPport(5007);
 end;
 
 commit;

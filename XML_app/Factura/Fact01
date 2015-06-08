@@ -17,6 +17,19 @@
       <ArticuloComprado codigo="TMPLUS" cantidad="5" precioUnitario="25"/>
     </LineaDeArticulo>
     
+    <LineaDeArticulo numeroLinea="3">
+      <NombreDeArticulo>Tarjeta Madre Máxima</NombreDeArticulo>
+      <ArticuloComprado codigo="TMMAX" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="4">
+      <NombreDeArticulo>Disco duro 1TB</NombreDeArticulo>
+      <ArticuloComprado codigo="DD1TB" cantidad="5" precioUnitario="25.5"/>
+    </LineaDeArticulo>
+    
+  
+    
+    
     
     
   </LineasDeCompra>
