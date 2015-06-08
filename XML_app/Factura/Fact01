@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.org Factura_XML.xsd" xmlns="http://www.example.org">
+  <CodigoFactura>Fact01</CodigoFactura>
+  <Proveedor>Prov01</Proveedor>
+  <Usuario>jrojas</Usuario>
+  <FechaCompra>2015-06-24</FechaCompra>
+  <LineasDeCompra>
+  
+    <LineaDeArticulo numeroLinea="1">
+      <NombreDeArticulo>Mouse Infrarrojo</NombreDeArticulo>
+      <ArticuloComprado codigo="MSInf" cantidad="2" precioUnitario="15"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="2">
+      <NombreDeArticulo>Tarjeta Madre Plus</NombreDeArticulo>
+      <ArticuloComprado codigo="TMPLUS" cantidad="5" precioUnitario="25"/>
+    </LineaDeArticulo>
+    
+    
+    
+  </LineasDeCompra>
+</Factura>
