@@ -136,7 +136,6 @@
       <NombreDeArticulo>Articulo Z</NombreDeArticulo>
       <ArticuloComprado codigo="ART_Z" cantidad="1" precioUnitario="75.56"/>
     </LineaDeArticulo>
-    
-    
+
   </LineasDeCompra>
 </Factura>
