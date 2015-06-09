@@ -31,6 +31,16 @@
       <NombreDeArticulo>Disco duro estado dólido</NombreDeArticulo>
       <ArticuloComprado codigo="DDSol" cantidad="3" precioUnitario="29.95"/>
     </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="6">
+      <NombreDeArticulo>Disco duro 300GB</NombreDeArticulo>
+      <ArticuloComprado codigo="DD300GB" cantidad="3" precioUnitario="45"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="7">
+      <NombreDeArticulo>Disco duro 700GB</NombreDeArticulo>
+      <ArticuloComprado codigo="DD700GB" cantidad="3" precioUnitario="55.75"/>
+    </LineaDeArticulo>
  
   </LineasDeCompra>
 </Factura>
