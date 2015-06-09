@@ -5,34 +5,30 @@
   xmlns="http://www.example.org"
   targetNamespace="http://www.example.org" 
   elementFormDefault="qualified">
-  <xsd:element name="Factura" type="Factura_Type" xdb:defaultTable="Facturas">
-    <xsd:annotation>
-      <xsd:documentation>A sample element</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:complexType name="Factura_Type">
+  <xsd:element name="Factura" type="Factura_Type" xdb:defaultTable="Facturas_XML"></xsd:element>
+  <xsd:complexType name="Factura_Type" xdb:SQLType="TFactura">
     <xsd:sequence>
-      <xsd:element name="CodigoFactura" type="CodigoFactura_Type"/>
-      <xsd:element name="Proveedor" type="Proveedor_Type"/>
-      <xsd:element name="Usuario" type="Usuario_Type"/>
-      <xsd:element name="FechaCompra" type="Fecha_Type"/>
-      <xsd:element name="LineasDeCompra" type="LineasDeCompra_Type"/>
+      <xsd:element name="CodigoFactura" type="CodigoFactura_Type" minOccurs="1" xdb:SQLName="CodigoFactura"/>
+      <xsd:element name="Proveedor" type="Proveedor_Type" xdb:SQLName="Proveedor"/>
+      <xsd:element name="Usuario" type="Usuario_Type" xdb:SQLName="Usuario"/>
+      <xsd:element name="FechaCompra" type="Fecha_Type" xdb:SQLName="FechaCompra"/>
+      <xsd:element name="LineasDeCompra" type="LineasDeCompra_Type" xdb:SQLName="LineasDeCompra"/>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="LineasDeCompra_Type">
+  <xsd:complexType name="LineasDeCompra_Type" xdb:SQLType="TLineasDeCompra">
     <xsd:sequence>
-      <xsd:element name="LineaDeArticulo" type="LineaDeArticulo_Type" maxOccurs="unbounded"/>
+      <xsd:element name="LineaDeArticulo" type="LineaDeArticulo_Type" maxOccurs="unbounded" xdb:SQLName="LineaDeArticulo" xdb:SQLCollSchema="LineaDeArticulo_V"/>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="LineaDeArticulo_Type">
+  <xsd:complexType name="LineaDeArticulo_Type" xdb:SQLType="TLineaDeArticulo">
     <xsd:sequence>
-      <xsd:element name="NombreDeArticulo" type="NombreArticulo_Type"/>
-      <xsd:element name="ArticuloComprado" type="ArticuloCompra_Type"/>
+      <xsd:element name="NombreDeArticulo" type="NombreArticulo_Type" xdb:SQLName="NombreDeArticulo"/>
+      <xsd:element name="ArticuloComprado" type="ArticuloCompra_Type" xdb:SQLName="ArticuloComprado"/>
     </xsd:sequence>
-    <xsd:attribute name="numeroLinea" type="xsd:integer"/>
+    <xsd:attribute name="numeroLinea" type="xsd:integer" xdb:SQLName="numeroLinea" xdb:SQLType="NUMBER"/>
   </xsd:complexType>
-  <xsd:complexType name="ArticuloCompra_Type">
-    <xsd:attribute name="codigo">
+  <xsd:complexType name="ArticuloCompra_Type" xdb:SQLType="TArticuloCompra">
+    <xsd:attribute name="codigo" xdb:SQLName="codigoArticulo" xdb:SQLType="VARCHAR2">
       <xsd:simpleType>
         <xsd:restriction base="xsd:string">
           <xsd:minLength value="1"/>
@@ -40,8 +36,8 @@
         </xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
-    <xsd:attribute name="cantidad" type="Cantidad_Type"/>
-    <xsd:attribute name="precioUnitario" type="Dinero_Type"/>
+    <xsd:attribute name="cantidad" type="Cantidad_Type" xdb:SQLName="cantidad"/>
+    <xsd:attribute name="precioUnitario" type="Dinero_Type" xdb:SQLName="precioUnitario"/>
   </xsd:complexType>
   <xsd:simpleType name="Cantidad_Type">
     <xsd:restriction base="xsd:decimal">
