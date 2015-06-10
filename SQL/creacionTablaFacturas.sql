@@ -49,13 +49,16 @@ FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
 
 Select * from facturas_obj;
 
+
+select to_date(usuario, 'DD/MM/YYYY') from facturas_obj;
+
 delete facturas_obj;
 
 
 
 
 DECLARE 
-    FECHA VARCHAR2(20) := '24-09-2014';
+    FECHA VARCHAR2(20) := '24-06-2014';
 BEGIN
     dbms_output.put_line(TO_DATE(FECHA, 'DD/MM/YYYY'));
 END;

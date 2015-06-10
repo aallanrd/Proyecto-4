@@ -2,19 +2,19 @@ CREATE OR REPLACE TRIGGER Facturas_XML_After_Insert
 AFTER INSERT ON "Facturas_XML"
 FOR EACH ROW
 
-DECLARE fechaCompra DATE;
+DECLARE fechaCompra VARCHAR2(10);
 
 BEGIN
-    
-    SELECT TO_DATE(EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/FechaCompra'),'DD/MM/YYYY') INTO fechaCompra
+   
+    SELECT EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/FechaCompra') INTO fechaCompra
     FROM DUAL;
 
 
      INSERT INTO FACTURAS_OBJ VALUES(
                                       EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/CodigoFactura'),
                                       EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/Proveedor'),
-                                      EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/Usuario'),
-                                      fechaCompra, 
+                                      fechaCompra,--EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/Usuario'),
+                                      SYSDATE, 
                                       T_LineasCompra()
                                     ); 
 
