@@ -23,7 +23,3 @@ select EXTRACTVALUE(OBJECT_VALUE, '/Factura/CodigoFactura'),
         EXTRACTVALUE(OBJECT_VALUE, '/Factura/Usuario'),
         EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra') 
 from "Facturas_XML";
-
-
-
-select EXTRACTVALUE(SYS_NC_ROWINFO$, '/Factura/CodigoFactura') from "Facturas_XML";

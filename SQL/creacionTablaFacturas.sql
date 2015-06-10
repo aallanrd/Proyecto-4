@@ -50,3 +50,5 @@ FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
 select * from facturas_obj;
 
 
+
+
