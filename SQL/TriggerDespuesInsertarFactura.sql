@@ -6,7 +6,7 @@ DECLARE fechaCompra DATE;
 
 BEGIN
     
-    SELECT EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/FechaCompra') INTO fechaCompra
+    SELECT TO_DATE(EXTRACTVALUE(:NEW.OBJECT_VALUE, '/Factura/FechaCompra'),'DD/MM/YYYY') INTO fechaCompra
     FROM DUAL;
 
 

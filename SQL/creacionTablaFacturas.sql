@@ -47,7 +47,24 @@ SELECT f.codigoFactura, f.fechaCompra, lineas.*
 FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
 
 
-select * from facturas_obj;
+Select * from facturas_obj;
+
+delete facturas_obj;
+
+
+
+
+DECLARE 
+    FECHA VARCHAR2(20) := '24-09-2014';
+BEGIN
+    dbms_output.put_line(TO_DATE(FECHA, 'DD/MM/YYYY'));
+END;
+
+
+
+
+
+
 
 
 
