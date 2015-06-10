@@ -11,8 +11,8 @@ commit;
 -- Registra el esquema.
 begin
   dbms_xmlschema.registerschema(
-    schemaurl => 'http://172.19.127.101:9090/grupoAllanMario/facturas/xsd/purchaseOrder.xsd',
-    schemadoc =>  xdbURIType('/grupoAllanMario/facturas/xsd/purchaseOrder.xsd').getClob(),
+    schemaurl => 'http://172.19.127.101:9090/grupoAllanMario/facturas/xsd/Factura_XML.xsd',
+    schemadoc =>  xdbURIType('/grupoAllanMario/facturas/xsd/Factura_XML.xsd').getClob(),
     local => TRUE,
     genTypes => TRUE,
     genBean => FALSE,
@@ -28,4 +28,5 @@ begin
     DELETE_OPTION => dbms_xmlschema.delete_cascade_force
   );
 end;
+
 
