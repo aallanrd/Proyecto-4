@@ -18,3 +18,12 @@ FROM "Facturas_XML", TABLE(XMLSEQUENCE(EXTRACT(OBJECT_VALUE, 'Factura/LineasDeCo
 
 
     
+select EXTRACTVALUE(OBJECT_VALUE, '/Factura/CodigoFactura'),
+        EXTRACTVALUE(OBJECT_VALUE, '/Factura/Proveedor'),
+        EXTRACTVALUE(OBJECT_VALUE, '/Factura/Usuario'),
+        EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra') 
+from "Facturas_XML";
+
+
+
+select EXTRACTVALUE(SYS_NC_ROWINFO$, '/Factura/CodigoFactura') from "Facturas_XML";
