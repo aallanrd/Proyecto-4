@@ -26,7 +26,7 @@ from "Facturas_XML";
 
 
 
---Obtener las líneas
+--Obtener las líneas de la factura con XMLTABLE
 
 select x.*
 from "Facturas_XML",
