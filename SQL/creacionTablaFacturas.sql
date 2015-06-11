@@ -47,28 +47,20 @@ SELECT f.codigoFactura, f.fechaCompra, lineas.*
 FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
 
 
-Select * from facturas_obj;
 
 
-select to_date(usuario, 'DD/MM/YYYY') from facturas_obj;
+Select * from facturas_obj
+WHERE codigofactura = 'Fact02';
+
+
+insert into table(select lineasDeCompra from facturas_obj where codigoFactura = 'Fact02')
+values ('TMHYPER', 2, 45.5);
+
+
+
+insert into table(select lineasDeCompra from facturas_obj where codigoFactura = 'Fact02')
+values ('DD500GB', 10, 15.35);
+
 
 delete facturas_obj;
-
-
-
-
-DECLARE 
-    FECHA VARCHAR2(20) := '24-06-2014';
-BEGIN
-    dbms_output.put_line(TO_DATE(FECHA, 'DD/MM/YYYY'));
-END;
-
-
-
-
-
-
-
-
-
 

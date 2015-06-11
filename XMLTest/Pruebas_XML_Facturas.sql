@@ -21,5 +21,25 @@ FROM "Facturas_XML", TABLE(XMLSEQUENCE(EXTRACT(OBJECT_VALUE, 'Factura/LineasDeCo
 select EXTRACTVALUE(OBJECT_VALUE, '/Factura/CodigoFactura'),
         EXTRACTVALUE(OBJECT_VALUE, '/Factura/Proveedor'),
         EXTRACTVALUE(OBJECT_VALUE, '/Factura/Usuario'),
-        EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra') 
+        EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra')
 from "Facturas_XML";
+
+
+
+--Obtener las líneas
+
+select x.*
+from "Facturas_XML",
+      XMLTABLE('Factura/LineasDeCompra/LineaDeArticulo' PASSING OBJECT_VALUE
+                columns
+                codigo VARCHAR(100) PATH 'ArticuloComprado/@codigo',
+                cantidad NUMBER(5) PATH 'ArticuloComprado/@cantidad',
+                precioUnitario NUMBER(18,2) PATH 'ArticuloComprado/@precioUnitario'
+              ) x;
+              
+              
+
+
+
+
+
