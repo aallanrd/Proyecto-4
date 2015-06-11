@@ -47,14 +47,6 @@ SELECT f.codigoFactura, f.fechaCompra, lineas.*
 FROM Facturas_OBJ f, TABLE(f.lineasDeCompra) lineas
 
 
-
-
-Select * from facturas_obj
-WHERE codigofactura = 'Fact02';
-
-
-
-
 delete facturas_obj;
 COMMIT;
 
