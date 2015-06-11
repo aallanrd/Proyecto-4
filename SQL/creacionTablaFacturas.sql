@@ -53,14 +53,10 @@ Select * from facturas_obj
 WHERE codigofactura = 'Fact02';
 
 
-insert into table(select lineasDeCompra from facturas_obj where codigoFactura = 'Fact02')
-values ('TMHYPER', 2, 45.5);
-
-
-
-insert into table(select lineasDeCompra from facturas_obj where codigoFactura = 'Fact02')
-values ('DD500GB', 10, 15.35);
 
 
 delete facturas_obj;
+COMMIT;
+
+
 
