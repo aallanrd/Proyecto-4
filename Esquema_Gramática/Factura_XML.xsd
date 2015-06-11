@@ -1,0 +1,78 @@
+<xsd:schema 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:xdb="http://xmlns.oracle.com/xdb"
+  version="1.0"
+  xdb:storeVarrayAsTable="true">
+  <xsd:element name="Factura" type="Factura_Type" xdb:defaultTable="Facturas_XML"></xsd:element>
+  <xsd:complexType name="Factura_Type" xdb:SQLType="Factura_T">
+    <xsd:sequence>
+      <xsd:element name="CodigoFactura" type="CodigoFactura_Type" minOccurs="1" xdb:SQLName="CodigoFactura"/>
+      <xsd:element name="Proveedor" type="Proveedor_Type" xdb:SQLName="Proveedor"/>
+      <xsd:element name="Usuario" type="Usuario_Type" xdb:SQLName="Usuario"/>
+      <xsd:element name="FechaCompra" type="Fecha_Type" xdb:SQLName="FechaCompra"/>
+      <xsd:element name="LineasDeCompra" type="LineasDeCompra_Type" xdb:SQLName="LineasDeCompra"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LineasDeCompra_Type" xdb:SQLType="LineasDeCompra_T">
+    <xsd:sequence>
+      <xsd:element name="LineaDeArticulo" type="LineaDeArticulo_Type" maxOccurs="unbounded" xdb:SQLName="LineaDeArticulo" xdb:SQLCollType="LineaDeArticulo_V"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LineaDeArticulo_Type" xdb:SQLType="LineaDeArticulo_T">
+    <xsd:sequence>
+      <xsd:element name="NombreDeArticulo" type="NombreArticulo_Type" xdb:SQLName="NombreDeArticulo"/>
+      <xsd:element name="ArticuloComprado" type="ArticuloCompra_Type" xdb:SQLName="ArticuloComprado"/>
+    </xsd:sequence>
+    <xsd:attribute name="numeroLinea" type="xsd:integer" xdb:SQLName="numeroLinea" xdb:SQLType="NUMBER"/>
+  </xsd:complexType>
+  <xsd:complexType name="ArticuloCompra_Type" xdb:SQLType="ArticuloCompra_T">
+    <xsd:attribute name="codigo" xdb:SQLName="codigoArticulo" xdb:SQLType="VARCHAR2">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="cantidad" type="Cantidad_Type" xdb:SQLName="cantidad"/>
+    <xsd:attribute name="precioUnitario" type="Dinero_Type" xdb:SQLName="precioUnitario"/>
+  </xsd:complexType>
+  <xsd:simpleType name="Cantidad_Type">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:totalDigits value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Dinero_Type">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2"/>
+      <xsd:totalDigits value="12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodigoFactura_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="3"/>
+      <xsd:maxLength value="25"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="NombreArticulo_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="2"/>
+      <xsd:maxLength value="50"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Fecha_Type">
+    <xsd:restriction base="xsd:date"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="Proveedor_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="0"/>
+      <xsd:maxLength value="20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Usuario_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="0"/>
+      <xsd:maxLength value="20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
