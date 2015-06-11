@@ -1,3 +1,8 @@
+CREATE OR REPLACE VIEW Facturas_XML_View OF XMLTYPE
+WITH OBJECT ID(
+                substr(EXTRACTVALUE(OBJECT_VALUE, 'Factura/CodigoFactura'), 1, 128)
+              )
+AS
 SELECT 
       XMLELEMENT("Factura", 
          XMLELEMENT("CodigoFactura", f.codigoFactura),
@@ -20,3 +25,4 @@ SELECT
                     )
       ) AS XML
 FROM Facturas_OBJ F;
+
