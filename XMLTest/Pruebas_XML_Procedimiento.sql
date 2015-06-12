@@ -1,0 +1,5 @@
+
+
+VARIABLE facturas REFCURSOR
+EXECUTE SP_MOSTRARFACTURASXML(:facturas);
+PRINT facturas;

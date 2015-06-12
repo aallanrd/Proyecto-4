@@ -26,7 +26,7 @@ IS
                                 FROM TABLE(f.lineasDeCompra) l
                        )
                     )
-      ) AS XML
+      ) AS facturas_XML
       FROM Facturas_OBJ F
       ORDER BY f.fechaCompra ASC;
 
