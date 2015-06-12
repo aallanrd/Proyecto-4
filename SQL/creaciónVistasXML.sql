@@ -24,7 +24,8 @@ SELECT
                        )
                     )
       ) AS XML
-FROM Facturas_OBJ F;
+FROM Facturas_OBJ F
+ORDER BY f.fechaCompra ASC;
 
 --PRUEBAS ***************************************************************************
 
