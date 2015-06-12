@@ -26,3 +26,19 @@ SELECT
       ) AS XML
 FROM Facturas_OBJ F;
 
+--PRUEBAS ***************************************************************************
+
+--Extraer la fecha de compra de la factura
+SELECT  EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra') "Fecha de Compra"
+FROM Facturas_XML_VIEW
+WHERE EXISTSNODE(OBJECT_VALUE, '/Factura[CodigoFactura="Fact02"]') = 1;
+
+
+
+--Extraer el código de las líneas de la factura
+SELECT EXTRACTVALUE(VALUE(ar), 'LineaDeArticulo/codigo') "Codigo del articulo"
+FROM Facturas_XML_VIEW,
+     TABLE(XMLSEQUENCE(EXTRACT(OBJECT_VALUE, '/Factura/LineasDeCompra/LineaDeArticulo'))) ar
+WHERE EXISTSNODE(OBJECT_VALUE, '/Factura[CodigoFactura="Fact02"]') = 1;
+
+
