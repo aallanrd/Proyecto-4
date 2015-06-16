@@ -27,7 +27,7 @@ SELECT
 FROM Facturas_OBJ F
 ORDER BY f.fechaCompra ASC;
 
---PRUEBAS ***************************************************************************
+--PRUEBAS DE LA VISTA***************************************************************************
 
 --Extraer la fecha de compra de la factura
 SELECT  EXTRACTVALUE(OBJECT_VALUE, '/Factura/FechaCompra') "Fecha de Compra"
