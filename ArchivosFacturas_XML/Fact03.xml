@@ -129,7 +129,7 @@
 
     <LineaDeArticulo numeroLinea="25">
       <NombreDeArticulo>Articulo 25</NombreDeArticulo>
-      <ArticuloComprado codigo="ART_25 cantidad="50" precioUnitario="100"/>
+      <ArticuloComprado codigo="ART_25" cantidad="50" precioUnitario="100"/>
     </LineaDeArticulo>
   
     <LineaDeArticulo numeroLinea="26">
