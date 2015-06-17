@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://172.19.127.101:9090/grupoAllanMario/facturas/xsd/Factura_XML.xsd">
+  <CodigoFactura>Fact03</CodigoFactura>
+  <Proveedor>Prov02</Proveedor>
+  <Usuario>joartavia</Usuario>
+  <FechaCompra>2015-03-25</FechaCompra>
+  <LineasDeCompra>
+  
+    <LineaDeArticulo numeroLinea="1">
+      <NombreDeArticulo>Articulo 1</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_1" cantidad="2" precioUnitario="5.35"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="2">
+      <NombreDeArticulo>Articulo 2</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_2" cantidad="20" precioUnitario="15"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="3">
+      <NombreDeArticulo>Articulo 3</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_3" cantidad="20" precioUnitario="2.15"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="4">
+      <NombreDeArticulo>Articulo 4</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_4" cantidad="20" precioUnitario="15"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="5">
+      <NombreDeArticulo>Articulo 5</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_5" cantidad="20" precioUnitario="50.45"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="6">
+      <NombreDeArticulo>Articulo 6</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_6" cantidad="1" precioUnitario="60"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="7">
+      <NombreDeArticulo>Articulo 7</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_7" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="8">
+      <NombreDeArticulo>Articulo 8</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_8" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="9">
+      <NombreDeArticulo>Articulo 9</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_9" cantidad="1" precioUnitario="30"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="10">
+      <NombreDeArticulo>Articulo 10</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_10" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="11">
+      <NombreDeArticulo>Articulo 11</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_11" cantidad="1" precioUnitario="55.37"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="12">
+      <NombreDeArticulo>Articulo 12</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_12" cantidad="4" precioUnitario="235.5"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="13">
+      <NombreDeArticulo>Articulo 13</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_13" cantidad="20" precioUnitario="5"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="14">
+      <NombreDeArticulo>Articulo 14</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_14" cantidad="50" precioUnitario="5"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="15">
+      <NombreDeArticulo>Articulo 15</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_15" cantidad="2" precioUnitario="35.67"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="16">
+      <NombreDeArticulo>Articulo 16</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_16" cantidad="2" precioUnitario="100"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="17">
+      <NombreDeArticulo>Articulo 17</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_17" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="18">
+      <NombreDeArticulo>Articulo 18</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_18" cantidad="2" precioUnitario="45"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="19">
+      <NombreDeArticulo>Articulo 19</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_19" cantidad="1" precioUnitario="100"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="20">
+      <NombreDeArticulo>Articulo 20</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_20" cantidad="5" precioUnitario="85"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="21">
+      <NombreDeArticulo>Articulo 21</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_21" cantidad="100" precioUnitario="1000"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="22">
+      <NombreDeArticulo>Articulo 22</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_22" cantidad="10" precioUnitario="10"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="23">
+      <NombreDeArticulo>Articulo 23</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_23" cantidad="1" precioUnitario="15.56"/>
+    </LineaDeArticulo>
+    
+    <LineaDeArticulo numeroLinea="24">
+      <NombreDeArticulo>Articulo 24</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_24" cantidad="8" precioUnitario="100"/>
+    </LineaDeArticulo>
+
+    <LineaDeArticulo numeroLinea="25">
+      <NombreDeArticulo>Articulo 25</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_25 cantidad="50" precioUnitario="100"/>
+    </LineaDeArticulo>
+  
+    <LineaDeArticulo numeroLinea="26">
+      <NombreDeArticulo>Articulo 26</NombreDeArticulo>
+      <ArticuloComprado codigo="ART_26" cantidad="1" precioUnitario="75.56"/>
+    </LineaDeArticulo>
+
+  </LineasDeCompra>
+</Factura>
